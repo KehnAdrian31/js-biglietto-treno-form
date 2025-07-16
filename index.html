@@ -15,7 +15,7 @@
   <div class="container my-2">
     <div class="row">
       <div class="col-12 text-center text-white">
-        <h2>CALCOLA IL PREZZO DEL TUO BIGLETTO</h2>
+        <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
       </div>
     </div>
   </div>
@@ -39,7 +39,7 @@
               <div class="col-12 col-md-4">
                 <div class="mb-3">
                   <label for="age-range" class="form-label text-danger">Fascia d' età</label>
-                  <select name="age-range" id="age-range" class="form-select">
+                  <select name="age-range" id="age-range" class="form-select" required>
                     <option value="choice">Scegli</option>
                     <option value="minor">Minorenne</option>
                     <option value="adulto">Adulto</option>
@@ -56,6 +56,46 @@
         </div>
       </div>
     </div>
+     <div class="container my-2">
+      <div class="row">
+        <div class="col-12 text-center text-white">
+          <h2>IL TUO BIGLIETTO</h2>
+        </div>
+      </div>
+     </div>
+     <div class="container bg-white rounded-2">
+      <div class="row">
+        <div class="col-12">
+           <div class=" d-flex  pt-3 mx-3 border-bottom border-secondary">
+              <h5 class="fw-bold">DETTAGLIO PASSEGGERI</h5>
+            </div>
+             <div class="d-flex px-3 justify-content-between border-bottom border-secondary flex-wrap">
+               <div class="d-flex flex-column bg-secondary py-2 px-3 mb-2">
+                 <h5 class="fw-bold">NOME PASSEGGERO</h5>
+                 <span class="fw-bold" id="show-name">JOHN SNOW</span>
+               </div>
+               <div class="d-flex flex-column justify-content-between pt-2 pb-3 px-4 ">
+                 <span class="fw-bold">Offerta</span>
+                  <span id="ticket">-----</span>
+               </div>
+               <div class="d-flex flex-column justify-content-between pt-2 pb-3 px-4 ">
+                 <span class="fw-bold">Carrozza</span>
+                  <span id="wagon">-----</span>
+               </div>
+               <div class="d-flex flex-column justify-content-between pt-2 pb-3 px-4 ">
+                 <span class="fw-bold">Codice CP</span>
+                  <span id="code-cp">-----</span>
+               </div>
+               <div class="d-flex flex-column justify-content-between pt-2 pb-3 px-4 ">
+                 <span class="fw-bold">Costo biglietto</span>
+                  <span id="price">-----</span>
+               </div>
+               
+
+             </div>
+        </div>
+      </div>
+     </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
   <script src="./js/script.js"></script>
 </body>
