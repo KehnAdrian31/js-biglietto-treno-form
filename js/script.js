@@ -75,4 +75,19 @@ document.addEventListener('DOMContentLoaded', function () {
     showCodeCP.innerText = codeCP;
     showPrice.innerText = `€ ${ticketPrice}`;
   });
+
+  // Reset form on "Annulla" button
+  const resetButton = document.querySelectorAll('button')[1]; // Second button
+  resetButton.addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent form reset
+
+    form.reset();
+
+    // Reset ticket display
+    showName.innerText = "JOHN SNOW";
+    showOffer.innerText = "-----";
+    showWagon.innerText = "-----";
+    showCodeCP.innerText = "-----";
+    showPrice.innerText = "-----";
+  });
 });
