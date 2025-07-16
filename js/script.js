@@ -31,4 +31,38 @@ document.addEventListener('DOMContentLoaded', function () {
   const showWagon = document.getElementById('wagon');
   const showCodeCP = document.getElementById('code-cp');
   const showPrice = document.getElementById('price');
+
+ // Handle form submission
+  form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent actual form submission
+
+    // Get values from inputs
+    const fullName = fullNameInput.value.trim();
+    const distance = parseFloat(distanceInput.value);
+    const ageRange = ageRangeSelect.value;
+
+    // Validation
+    if (!fullName || isNaN(distance) || distance <= 0 || ageRange === 'choice') {
+      alert("Per favore compila tutti i campi correttamente.");
+      return;
+    }
+
+    // Constants
+    const pricePerKm = 0.21;
+    let ticketPrice = distance * pricePerKm;
+    let offer = "Standard";
+
+    // Apply discounts based on age
+    if (ageRange === 'minor') {
+      ticketPrice *= 0.8;
+      offer = "Sconto Minorenne";
+    } else if (ageRange === 'anziano') {
+      ticketPrice *= 0.6;
+      offer = "Sconto Over 65";
+    }
+
+    // Round price to 2 decimals
+    ticketPrice = ticketPrice.toFixed(2);
+
+    
 });
