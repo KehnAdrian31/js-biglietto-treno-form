@@ -64,5 +64,15 @@ document.addEventListener('DOMContentLoaded', function () {
     // Round price to 2 decimals
     ticketPrice = ticketPrice.toFixed(2);
 
-    
+    // Generate random wagon and CP code
+    const wagonNumber = Math.floor(Math.random() * 12) + 1;
+    const codeCP = Math.floor(Math.random() * 90000) + 10000;
+
+    // Update the ticket section
+    showName.innerText = fullName.toUpperCase();
+    showOffer.innerText = offer;
+    showWagon.innerText = wagonNumber;
+    showCodeCP.innerText = codeCP;
+    showPrice.innerText = `€ ${ticketPrice}`;
+  });
 });
